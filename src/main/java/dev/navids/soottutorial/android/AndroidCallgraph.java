@@ -18,7 +18,8 @@ public class AndroidCallgraph {
     private final static String USER_HOME = System.getProperty("user.home");
     private static String androidJar = USER_HOME + "/Library/Android/sdk/platforms";
     static String androidDemoPath = System.getProperty("user.dir") + File.separator + "demo" + File.separator + "Android";
-    static String apkPath = androidDemoPath + File.separator + "/st_demo.apk";
+    static String apkPath = androidDemoPath + File.separator + "/app-release-unsigned.apk";
+//    static String apkPath = "/Users/kishanthan/Work/research/clones/joern/example/MixologyExplorer/BarAppCompose/app/build/outputs/apk/release/app-release-unsigned-dex2jar.jar";
     static String childMethodSignature = "<dev.navids.multicomp1.ClassChild: void childMethod()>";
     static String childBaseMethodSignature = "<dev.navids.multicomp1.ClassChild: void baseMethod()>";
     static String parentMethodSignature = "<dev.navids.multicomp1.ClassParent: void baseMethod()>";
@@ -89,12 +90,12 @@ public class AndroidCallgraph {
 
 
         // Draw a subset of call graph
-        if (drawGraph) {
-            Visualizer.v().addCallGraph(callGraph,
-                    androidCallGraphFilter,
-                    new Visualizer.AndroidNodeAttributeConfig(true));
-            Visualizer.v().draw();
-        }
+//        if (drawGraph) {
+//            Visualizer.v().addCallGraph(callGraph,
+//                    androidCallGraphFilter,
+//                    new Visualizer.AndroidNodeAttributeConfig(true));
+//            Visualizer.v().draw();
+//        }
     }
 
     // A Breadth-First Search algorithm to get all reachable methods from initialMethod in the callgraph
